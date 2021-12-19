@@ -598,7 +598,7 @@ Pi WALL-E only has two wheels but it can self balanced very well! We can also se
           <h3>Yuchen Lu</h3>
           <p class="lead">yl2237@cornell.edu</p>
           <p> Assemble the Pi WALL-E and debug the CODEs. <br>
-              Also finish the final report.
+              Finish the final report.
       </div>
   </div>
 
@@ -647,4 +647,3 @@ https://github.com/Typo90/ECE5725-Self-Balanced-Robot
         Thank Jiao Yang's motors and TB6612.<br />
         Thank Kuan Lu's access of maker lab and encouragement for us.<br />
 		Thank Hanzhong Liang's help to PID paremters adjustment.<br/>
-
