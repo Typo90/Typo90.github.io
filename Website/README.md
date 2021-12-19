@@ -48,7 +48,7 @@ We will display the code step by step to show how it works.
 
 You need to connect the Raspberry Pi to all the components like the picture shown below.
 
-![graph](D:\Users\Yucheng Peng\Desktop\Typo90.github.io\Website\pics\graph.png)
+![graph](pics\graph.png)
 
 ### Raspberry Pi code
 
@@ -120,7 +120,7 @@ And we can use the command to make sure the encoder module is successfully loade
 sudo ismod
 ```
 
-![lsmod encoder](D:\Users\Yucheng Peng\Desktop\Typo90.github.io\Website\pics\lsmod encoder.png)
+![lsmod encoder](pics\lsmod encoder.png)
 
 ##### Step3: Compile C Program
 
@@ -597,6 +597,7 @@ As shown in the video, we design a two wheel self-balanced robot and add an cute
   </div>
 
 
+
 <hr>
   <div style="font-size:18px">
       <h2>Parts List</h2>
@@ -632,7 +633,7 @@ https://github.com/Typo90/ECE5725-Self-Balanced-Robot
         Here, we sincerely appreciate all of you that provides help in the success of Pi WALL-E.<br />
         First and foremost, thank Professor Joe Skovire. You provdie a platform for us to bulid this cute Pi WALL-E robot.
         And we also really appreciate your suggestions like version control and how to make python code faster. <br />
-        Thank all TAs that help us to dubug and to find some components from lab<br />
+        Thank all TAs that help us to dubug and to find some components from lab.<br />
         Thank Guirong Lin that shipped the 12V motors and whole structure of the Pi WALL-E from China <br />
         Thank Yuchong Geng's 32g SDcard. And thank you for spending a whole night debugging with us.<br />
         Thank Hehong Li's android phone that helped us get through the hard time during the loss of our phone.<br />
@@ -640,4 +641,3 @@ https://github.com/Typo90/ECE5725-Self-Balanced-Robot
         Thank Jiao Yang's motors and TB6612.<br />
         Thank Kuan Lu's access of maker lab and encouragement for us.<br />
 		Thank Hanzhong Liang's help to PID paremters adjustment.<br/>
-
