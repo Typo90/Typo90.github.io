@@ -357,9 +357,29 @@ Because the count of the encoder is proportional to the motor speed, it is no ne
 
 ![image-20211218232544884](pics\Speed loop of PID controller.png)
 
-#### Performance of Program  
+## TESTS AND RESULTS 
 
-As the result shown below, this program reads **57 times/second** of angel. Then set PWM signal to TB6612 **29 times/second**. It is really fast than python code so we successfully to let the  Pi WALL-E self balanced.
+### Android APP
+
+The GUI of the Android app is shown in Figure. The buttons in the lower right corner are used to control the rotation direction of the camera. There is a TCP server in RPI and when the direction button is pressed, a thread will be started in APP via socket API to send commands to RPI. For example, when the ‘L’ left button is touched, our control app will start a thread and send the ‘turn left’ command to RPI via socket API. Then the ginbal will control the camera to turn left and WALL’E could see the left things he wants to know!
+
+![WALL-E app control](pics\WALL-E app control.png)
+
+### WALL-E’s balance
+
+ As shown in codes in the last sections and figures, firstly the robot could keep balanced before running the ‘main.c’ code. After running balanced code, the robot could keep upright. When we push it forward, it will read the forward angle and increase its forward speed to keep balance. 
+
+As shown in the left column of the figure below, m1 and m2 are the speed of the left and right motors respectively and gyro is an acceleration coefficient. When the angle increases from 1.96 degrees to 2.52 degrees, the gyro will increase from 30 to 52 and the motor speed will increase from 422 to 472 to avoid robot ‘WALL-E’ falling. As shown in the right column of the figure below, the measured angle of the robot is 6 degrees, so it has an initial motor speed of 247 to avoid falling. With the decreasing of the angle from 6.13 degrees to 5.95 degrees, the speed of motors is decreased from 248 to 229.
+
+![Balance control results](pics\Balance control results.png)
+
+To avoid the speed increasing extremely fast and burning out the servo, a safe system is set in the motor control file. As shown in the figure below, when the robot ‘WALL-E’ is falling so fast and the angle increased dramatically, the motor speed will be increased extremely fast to reach the max value of speed and angle. Then the motor will stop immediately and let the robot ‘WALL-E’ rest for a while. For example, when the angle is 40 degrees and the speed is 2000, this robot will shut down safely and get a rest and stop working.
+
+![Safety shutdown of the robot](pics\Safety shutdown of the robot.png)
+
+### Performance of Program  
+
+As the result shown below, this program reads **57 times/second** of angel. Then set PWM signal to TB6612 **29 times/second**. It is really fast than python code so we successfully to let the  Pi WALL-E self balanced. 
 
 ```shell
 pi@raspberrypi:~/workspace/pi-robot/Robot Code $ sudo ./main
@@ -387,191 +407,10 @@ Set PWM time:1639886607  Angle Time: 1639886607
 Angle Time: 1639886607
 Set PWM time:1639886607  Angle Time: 1639886607
 Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886607
-Set PWM time:1639886607  Angle Time: 1639886607
-Angle Time: 1639886608
-Set PWM time:1639886608  Angle Time: 1639886608
-Angle Time: 1639886608
-Set PWM time:1639886608  Angle Time: 1639886608
-Angle Time: 1639886608
-Set PWM time:1639886608  Angle Time: 1639886608
-Angle Time: 1639886608
-Set PWM time:1639886608  Angle Time: 1639886608
-Angle Time: 1639886608
-Set PWM time:1639886608  Angle Time: 1639886608
-Angle Time: 1639886608
-Set PWM time:1639886608  Angle Time: 1639886608
-Angle Time: 1639886608
-Set PWM time:1639886608  Angle Time: 1639886608
-Angle Time: 1639886608
-Set PWM time:1639886608  Angle Time: 1639886608
-Angle Time: 1639886608
-Set PWM time:1639886608  Angle Time: 1639886608
-Angle Time: 1639886608
-Set PWM time:1639886608  Angle Time: 1639886608
-Angle Time: 1639886608
-Set PWM time:1639886608  Angle Time: 1639886608
-Angle Time: 1639886608
-Set PWM time:1639886608  Angle Time: 1639886608
-Angle Time: 1639886608
-Set PWM time:1639886608  Angle Time: 1639886608
-Angle Time: 1639886608
-Set PWM time:1639886608  Angle Time: 1639886608
-Angle Time: 1639886608
-Set PWM time:1639886608  Angle Time: 1639886608
-Angle Time: 1639886608
-Set PWM time:1639886608  Angle Time: 1639886608
-Angle Time: 1639886608
-Set PWM time:1639886608  Angle Time: 1639886608
-Angle Time: 1639886608
-Set PWM time:1639886608  Angle Time: 1639886608
-
+...
 ```
 
-## RESULT
+### Last word
 
 As shown in the video, we design a two wheel self-balanced robot and add an cute eye on the top of the robot. Then name this cute robot as Pi WALL-E. We set an Android app connected to the phone to control the gimbal and rotate the camera, thus we can see the world in different directions from WALL-E’s eye.
 
@@ -646,3 +485,4 @@ https://github.com/Typo90/ECE5725-Self-Balanced-Robot
         Thank Jiao Yang's motors and TB6612.<br />
         Thank Kuan Lu's access of maker lab and encouragement for us.<br />
 		Thank Hanzhong Liang's help to PID paremters adjustment.<br/>
+
