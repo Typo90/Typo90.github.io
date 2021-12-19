@@ -1,3 +1,5 @@
+
+
 <div align = "center" class="container">
 <div class="starter-template">
   <h1>Pi WALL-E</h1>
@@ -282,7 +284,7 @@ These functions of i2c_write, i2c_read, delay_ms, get_ms, reg_int_cb, labs, fabs
 
 Then functions of i2cwrite, i2cRead, and delay_ms are implemented by the following codes. 
 
-![image-20211218220627697](\pics\Functions of i2cwrite, i2cRead and delay_ms.png)
+![image-20211218220627697](pics\Functions of i2cwrite, i2cRead and delay_ms.png)
 
 The parameter list of the read-write function and function prototype is determined. Therefore, the function prototype could not be defined casually to avoid error prompting during compilation. The parameter list consists of the slave address, register, data length, and data content. The address uses 7-bit address mode. I2c and SMBus are used in this code. I2C is a two-wire communication protocol developed by Philips, which is often used in small devices that don’t require high speed. SMBus is a system management bus based on the I2C protocol. I2c and SMBus are compatible in the system generally. Firstly, the ioctl function is used to set the slave address, and then call the i2c read and write functions to read and write data. The delay millisecond function is implemented using the usleep function which is a subtle function and multiplied by 1000 to achieve millisecond delay.
 
@@ -575,6 +577,8 @@ Set PWM time:1639886608  Angle Time: 1639886608
 
 As shown in the video, we design a two wheel self-balanced robot and add an cute eye on the top of the robot. Then name this cute robot as Pi WALL-E. We set an Android app connected to the phone to control the gimbal and rotate the camera, thus we can see the world in different directions from WALL-E’s eye.
 
+Pi WALL-E only has two wheels but it can self balanced very well! We can also see the video on the phone from the Pi WALL-E's eye and control the eye move around.
+
 <hr>
 <div class="row" style="text-align:center;">
       <h2>Work Distribution</h2>
@@ -586,16 +590,17 @@ As shown in the video, we design a two wheel self-balanced robot and add an cute
           <img class="img-rounded" src="pics/Yucheng Peng.jpg" alt="Generic placeholder image" width="240" height="420">
           <h3>Yucheng Peng</h3>
           <p class="lead">yp284@cornell.edu</p>
-          <p>
-      </div>
+          <p> Design the Balancing, Android, and RPi CODEs. <br>
+              Complete final html file.
+      </div
       <div class="col-md-6" style="font-size:16px">
           <img class="img-rounded" src="pics/Yuchen Lu.jpg" alt="Generic placeholder image" width="240" height="420">
           <h3>Yuchen Lu</h3>
           <p class="lead">yl2237@cornell.edu</p>
-          <p>
+          <p> Assemble the Pi WALL-E and debug the CODEs. <br>
+              Also finish the final report.
       </div>
   </div>
-
 
 
 <hr>
@@ -623,6 +628,7 @@ As shown in the video, we design a two wheel self-balanced robot and add an cute
   <div class="row">
           <h2>Code Appendix</h2>
   </div>
+We put all our code in the github! See the linke below.
 
 https://github.com/Typo90/ECE5725-Self-Balanced-Robot
 
