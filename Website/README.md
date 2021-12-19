@@ -261,7 +261,7 @@ Different input to TB6612 can control different direction of motors.
 
 In this section, the key sensor MPU6050 will be illustrated Fig. 1. To keep our two-wheel balanced car ‘WALL-E’ upright and moving forward and backward smoothly, the first thing that needs to obtain is the attitude angle of the car and the change of angle will decide the motor speed. Sensor MPU6050 is a three-direction sensor used to read all acceleration of x, y, and z directions to compute the corresponding moving angle of x, y, and z directions. This computing method will be explained later. Through the angle, the attitude of the car relative to the ground will be obtained to make corresponding control adjustments. For example, when the robot is moving forward, the angle will be computed, and the forward speed will be increased to balance the car. 
 
-<img src="\pics\MPU6050.png" alt="MPU6050" style="zoom: 50%;" />
+<img src="pics\MPU6050.png" alt="MPU6050" style="zoom:50%;" />
 
 The angle computing method in this section is the Quaternion method [1]. DMP library is provided in MPU6050. The quaternion method is used in the underlying algorithm and the driver is configured and transplanted to use quaternion to moving angles. Besides, commonly used attitude computation methods also include the Kalman filter and complementary filter methods [2]. In the configure and transplant work of MPU6050, the following work is illustrated in Fig. 2 in inv_mpu.c file
 
@@ -641,3 +641,4 @@ https://github.com/Typo90/ECE5725-Self-Balanced-Robot
         Thank Jiao Yang's motors and TB6612.<br />
         Thank Kuan Lu's access of maker lab and encouragement for us.<br />
 		Thank Hanzhong Liang's help to PID paremters adjustment.<br/>
+
