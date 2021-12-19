@@ -1,5 +1,3 @@
-
-
 <div align = "center" class="container">
 <div class="starter-template">
   <h1>Pi WALL-E</h1>
@@ -598,9 +596,10 @@ Pi WALL-E only has two wheels but it can self balanced very well! We can also se
           <h3>Yuchen Lu</h3>
           <p class="lead">yl2237@cornell.edu</p>
           <p> Assemble the Pi WALL-E and debug the CODEs. <br>
-              Finish the final report.
+              Write and complete final report.
       </div>
   </div>
+
 
 
 <hr>
@@ -628,7 +627,7 @@ Pi WALL-E only has two wheels but it can self balanced very well! We can also se
   <div class="row">
           <h2>Code Appendix</h2>
   </div>
-We put all our code in the github! See the linke below.
+We put all our CODEs in the github! See the linke below.
 
 https://github.com/Typo90/ECE5725-Self-Balanced-Robot
 
