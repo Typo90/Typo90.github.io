@@ -48,7 +48,7 @@ We will display the code step by step to show how it works.
 
 You need to connect the Raspberry Pi to all the components like the picture shown below.
 
-![Wiring diagram](\pics\Wiring diagram.jpg)
+![graph](D:\Users\Yucheng Peng\Desktop\Typo90.github.io\Website\pics\graph.png)
 
 ### Raspberry Pi code
 
@@ -120,7 +120,7 @@ And we can use the command to make sure the encoder module is successfully loade
 sudo ismod
 ```
 
-![lsmod encoder](\pics\lsmod encoder.png)
+![lsmod encoder](D:\Users\Yucheng Peng\Desktop\Typo90.github.io\Website\pics\lsmod encoder.png)
 
 ##### Step3: Compile C Program
 
@@ -167,7 +167,7 @@ The WALL-E's eye is composed by Gimbal, Pi camera and android phone.
 
 #### Pi camera
 
-<img src="D:\Users\Yucheng Peng\Desktop\Typo90.github.io\Website\pics\Pi Camrea.jpg" alt="Pi Camrea" style="zoom:50%;" />
+<img src="pics\Pi Camrea.jpg" alt="Pi Camrea" style="zoom:50%;" />
 
 The Camera Module 2 can be used to take high-definition video, as well as stills photographs.
 
@@ -575,7 +575,7 @@ Set PWM time:1639886608  Angle Time: 1639886608
 
 As shown in the video, we design a two wheel self-balanced robot and add an cute eye on the top of the robot. Then name this cute robot as Pi WALL-E. We set an Android app connected to the phone to control the gimbal and rotate the camera, thus we can see the world in different directions from WALL-E’s eye.
 
-    <hr>
+<hr>
 <div class="row" style="text-align:center;">
       <h2>Work Distribution</h2>
       <div style="text-align:center;">
@@ -595,6 +595,7 @@ As shown in the video, we design a two wheel self-balanced robot and add an cute
           <p>
       </div>
   </div>
+
 
 <hr>
   <div style="font-size:18px">
