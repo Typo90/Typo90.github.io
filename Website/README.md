@@ -571,7 +571,7 @@ Set PWM time:1639886608  Angle Time: 1639886608
 
 ```
 
-## REUSLT
+## RESULT
 
 As shown in the video, we design a two wheel self-balanced robot and add an cute eye on the top of the robot. Then name this cute robot as Pi WALL-E. We set an Android app connected to the phone to control the gimbal and rotate the camera, thus we can see the world in different directions from WALL-E’s eye.
 
@@ -640,3 +640,4 @@ https://github.com/Typo90/ECE5725-Self-Balanced-Robot
         Thank Jiao Yang's motors and TB6612.<br />
         Thank Kuan Lu's access of maker lab and encouragement for us.<br />
 		Thank Hanzhong Liang's help to PID paremters adjustment.<br/>
+
