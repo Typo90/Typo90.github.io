@@ -48,8 +48,6 @@ We will display the code step by step to show how it works.
 
 You need to connect the Raspberry Pi to all the components like the picture shown below.
 
-
-
 ![Wiring diagram](\pics\Wiring diagram.jpg)
 
 ### Raspberry Pi code
@@ -122,7 +120,7 @@ And we can use the command to make sure the encoder module is successfully loade
 sudo ismod
 ```
 
-![image-20211215182541134](\pics\lsmod encoder.png)
+![lsmod encoder](\pics\lsmod encoder.png)
 
 ##### Step3: Compile C Program
 
@@ -641,4 +639,3 @@ https://github.com/Typo90/ECE5725-Self-Balanced-Robot
         Thank Jiao Yang's motors and TB6612.<br />
         Thank Kuan Lu's access of maker lab and encouragement for us.<br />
 		Thank Hanzhong Liang's help to PID paremters adjustment.<br/>
-
